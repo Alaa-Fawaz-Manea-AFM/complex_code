@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Centering</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex {
+        display: flex;
+      }
+      .h-full {
+        height: 100vh;
+      }
+
+      /* flex 1 */
+      .container_box_flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box_flex {
+        width: 200px;
+        height: 200px;
+        background-color: black;
+      }
+
+      /* box_grid 2 */
+
+      .container_box_grid {
+        display: grid;
+        place-items: center;
+      }
+      .box_grid {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+
+      /* box_position 3 */
+      .position_box {
+        position: relative;
+      }
+      .box_position {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* margin 4 */
+      .box_margin {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        background-color: black;
+      }
+
+      /* Flexbox + margin 5 */
+      .center-div {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- flex 1 -->
+      <div class="container_box_flex h-full">
+        <div class="box_flex"></div>
+      </div>
+      <!-- grid 2 -->
+
+      <div class="container_box_grid h-full">
+        <div class="box_grid"></div>
+      </div>
+
+      <!-- position 3 -->
+      <div class="position_box h-full">
+        <div class="box_position"></div>
+      </div>
+
+      <!-- margin 4 -->
+      <div class="h-full flex">
+        <div class="box_margin"></div>
+      </div>
+
+      <!--  Flexbox + margin 5 -->
+      <div class="h-full flex">
+        <div class="center-div"></div>
+      </div>
+    </main>
+  </body>
+</html>
